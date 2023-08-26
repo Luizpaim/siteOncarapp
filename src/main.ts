@@ -18,8 +18,6 @@ import App from '@/App.vue'
 import router from '@/router'
 
 import Layout from '@/components/Layout.vue'
-import Button from '@/components/Button.vue'
-
 const app = createApp(App)
 
 app.use(createPinia())
@@ -32,7 +30,6 @@ AOS.init()
 app.directive('tooltip', Tooltip)
 
 app.component('Layout', Layout)
-app.component('Button', Button)
 app.component('Toast', Toast)
 
 app.mount('#app')

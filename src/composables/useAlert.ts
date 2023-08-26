@@ -10,8 +10,8 @@ export const useAlert = () => {
   const alertError = (error: ErrorT, life: number) =>
     add({ severity: 'error', detail: error.result.errorDetails, life: life })
 
-  const alertWarn = (detail: string, life: number, summary?: string) =>
-    add({ severity: 'warn', summary: summary, detail: detail, life: life })
+  const alertWarn = (error: ErrorT, life: number) =>
+    add({ severity: 'warn', detail: error.result.errorDetails, life: life })
 
   return {
     alertSucess,

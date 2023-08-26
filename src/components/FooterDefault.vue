@@ -40,4 +40,39 @@ const iconsSocial: string[] = reactive([iconFacebook, iconInstagram, iconLinkedi
   margin-right: 20px;
   cursor: pointer;
 }
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .container-footer-default {
+    flex-direction: column;
+  }
+  .image-footer {
+    margin: 20px;
+  }
+  .footer-default {
+    height: 30vh;
+  }
+  .socials {
+    margin-left: 20px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .container-footer-default {
+    flex-direction: column;
+  }
+  .image-footer {
+    margin: 20px;
+  }
+  .footer-default {
+    height: 50vh;
+  }
+  .socials {
+    margin-left: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .image-footer {
+    margin: 20px;
+  }
+}
 </style>

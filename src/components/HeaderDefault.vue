@@ -9,7 +9,7 @@
 <style lang="scss" scoped>
 .header-default {
   background-color: var(--bg);
-  height: 10vh;
+  height: 70px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
   display: flex;
   align-items: center;

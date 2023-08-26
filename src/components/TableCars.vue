@@ -26,7 +26,9 @@ const selectedCar = ref()
 
 watch(
   () => selectedCar.value,
-  () => emit('selectedCar', selectedCar.value)
+  () => {
+    emit('selectedCar', selectedCar.value)
+  }
 )
 const formatCurrency = (value) =>
   value.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
@@ -41,10 +43,10 @@ const formatCurrency = (value) =>
       :lazy="lazy"
       :paginator="paginator"
       :loading="loading"
-      :rows="Number(rows)"
+      :rows="10"
       @page="emit('onPage', $event)"
       paginatorTemplate="CurrentPageReport FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink RowsPerPageDropdown"
-      :rowsPerPageOptions="[5, 20, 50]"
+      :rowsPerPageOptions="[10, 20, 50]"
       currentPageReportTemplate="{totalRecords} Veículo(s)"
       responsiveLayout="scroll"
       :rowHover="true"

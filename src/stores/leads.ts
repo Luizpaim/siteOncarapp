@@ -7,8 +7,13 @@ export const useLeadsStore = defineStore('leads', () => {
 
   const lead = ref()
 
-  const postLead = async (body: { brand: string; model: string; year: string; price: string }) =>
-    await post(body).then((response) => (lead.value = response.data))
+  const postLead = async (body: {
+    idCar: string
+    brand: string
+    model: string
+    year: string
+    price: string
+  }) => await post(body).then((response) => (lead.value = response.data))
 
   return { postLead, lead }
 })
