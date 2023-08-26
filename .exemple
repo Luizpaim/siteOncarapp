@@ -1,0 +1,2 @@
+VITE_APP_URL=http://localhost:5000/development
+VITE_PORT_SERVE=8081
